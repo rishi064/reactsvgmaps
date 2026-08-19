@@ -182,7 +182,9 @@ function MapNepal() {
               colorMap Prop Value
             </span>
             <pre className="text-sm bg-gray-100 text-[#023f45] px-3 py-1.5 rounded-lg border border-gray-200 shadow-sm m-0 flex items-center font-mono">
-              {JSON.stringify(currentColorMap)}
+              {`{ ${Object.entries(currentColorMap)
+                .map(([key, value]) => `${key}: "${value}"`)
+                .join(", ")} }`}
             </pre>
           </div>
         </div>
