@@ -1,0 +1,30 @@
+{
+  "name": "react-svg-maps",
+  "version": "1.0.0",
+  "description": "Interactive SVG maps for React (Nepal districts and provinces)",
+  "author": "Rishi Prasad Aryal",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./np": {
+      "import": "./dist/np.js",
+      "require": "./dist/np.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && vite build"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "vite": "^8.2.1"
+  }
+}
