@@ -26,6 +26,11 @@ function MapNepal() {
   const hoveredName = getName(hoveredId);
   const selectedName = getName(clickedId);
 
+  const currentColorMap =
+    mapType === "province"
+      ? { Koshi: "blue", Lumbini: "green" }
+      : { Palpa: "blue", Kathmandu: "red", Jhapa: "yellow" };
+
   const mapProps = {
     className:
       "lg:w-255.5 lg:h-158.5 md:w-191.5 md:h-118.75 sm:w-160 sm:h-99 w-86 h-100",
@@ -151,24 +156,35 @@ function MapNepal() {
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-3">
-          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-            Attributions
-          </span>
-          <label className="flex items-center cursor-pointer">
-            <div
-              onClick={() => setShowAttributions((prev) => !prev)}
-              className={`relative w-10 h-5 rounded-full transition-colors duration-200 ${
-                showAttributions ? "bg-[#023f45]" : "bg-gray-300"
-              }`}
-            >
+        <div className="flex flex-row flex-wrap items-center gap-8">
+          <div className="flex flex-row items-center gap-3">
+            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              Attributions
+            </span>
+            <label className="flex items-center cursor-pointer">
               <div
-                className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
-                  showAttributions ? "translate-x-5" : "translate-x-0.5"
+                onClick={() => setShowAttributions((prev) => !prev)}
+                className={`relative w-10 h-5 rounded-full transition-colors duration-200 ${
+                  showAttributions ? "bg-[#023f45]" : "bg-gray-300"
                 }`}
-              />
-            </div>
-          </label>
+              >
+                <div
+                  className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
+                    showAttributions ? "translate-x-5" : "translate-x-0.5"
+                  }`}
+                />
+              </div>
+            </label>
+          </div>
+
+          <div className="flex flex-row items-center gap-3">
+            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              colorMap Prop Value
+            </span>
+            <pre className="text-sm bg-gray-100 text-[#023f45] px-3 py-1.5 rounded-lg border border-gray-200 shadow-sm m-0 flex items-center font-mono">
+              {JSON.stringify(currentColorMap)}
+            </pre>
+          </div>
         </div>
       </div>
 
@@ -177,13 +193,13 @@ function MapNepal() {
           <NepalProvinceMap
             {...mapProps}
             showAttributions={showAttributions}
-            colorMap={{ Koshi: "blue", Lumbini: "green" }}
+            colorMap={currentColorMap}
           />
         ) : (
           <NepalDistrictMap
             {...mapProps}
             showAttributions={showAttributions}
-            colorMap={{ Palpa: "blue", Kathmandu: "red" }}
+            colorMap={currentColorMap}
           />
         )}
       </div>
