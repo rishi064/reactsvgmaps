@@ -3,6 +3,7 @@
 This is a demonstration application for the `react-svg-maps` package, built with Vite and React. It provides an interactive playground to test and customize the SVG maps available in the library.
 
 **Live Demo:** [https://reactsvgmaps.com](https://reactsvgmaps.com)
+**GitHub:** [https://github.com/rishi064/reactsvgmaps](https://github.com/rishi064/reactsvgmaps)
 
 ## Features
 

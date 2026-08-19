@@ -4,6 +4,10 @@
   "description": "Interactive SVG maps for React (Nepal districts and provinces)",
   "author": "Rishi Prasad Aryal",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rishi064/reactsvgmaps.git"
+  },
   "type": "module",
   "exports": {
     "./np": {

@@ -3,6 +3,7 @@
 A React component library for interactive SVG maps. Currently features Nepal's district and province maps.
 
 **Live Demo:** [https://reactsvgmaps.com](https://reactsvgmaps.com)
+**GitHub:** [https://github.com/rishi064/reactsvgmaps](https://github.com/rishi064/reactsvgmaps)
 
 ## Installation
 
@@ -61,4 +62,5 @@ All map components accept the following props:
 
 ## License
 
-MIT
+Code released under the [MIT License](LICENSE).
+Map boundary data is derived from Wikimedia Commons under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
