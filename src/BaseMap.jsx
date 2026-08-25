@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+// Internal engine, not exported from the package. Country components forward
+// the developer's props, then set the data-specific ones after the spread.
 export function BaseMap({
   paths,
   regionNames,
@@ -14,6 +16,10 @@ export function BaseMap({
   viewBox = "0 0 300 150",
   mapTransform = "",
   showAttributions = true,
+  attribution,
+  stroke = "black",
+  strokeWidth = 1,
+  fillRule,
 }) {
   const [hoveredId, setHoveredId] = useState(null);
   const [clickedId, setClickedId] = useState(null);
@@ -50,46 +56,45 @@ export function BaseMap({
   return (
     <div style={{ position: "relative", display: "inline-block" }} className={className}>
       <svg style={style} viewBox={viewBox} version="1.1" width="100%" height="100%">
-        <g transform={mapTransform || undefined}>
-          <g
-            style={{ strokeLineCap: "round", strokeLineJoin: "round" }}
-            transform="matrix(0.3663,0,0,0.3642,10.3,144.7)"
-          >
-            <g transform="matrix(1.004,0,0,0.941,41.09,18.47)">
-              {paths.map((newPath) => {
-              const regionName = getRegionName(newPath.id);
-              const isHovered = hoveredId === newPath.id;
-              const isClicked = clickedId === newPath.id;
+        <g
+          transform={mapTransform || undefined}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {paths.map((newPath) => {
+            const regionName = getRegionName(newPath.id);
+            const isHovered = hoveredId === newPath.id;
+            const isClicked = clickedId === newPath.id;
 
-              const mappedColor =
-                colorMap && colorMap[regionName] ? colorMap[regionName] : null;
-              const baseColor = mappedColor || color || newPath.fill;
-              const fillColor = isClicked
-                ? activeColor || baseColor
-                : isHovered
-                  ? hoverColor || baseColor
-                  : baseColor;
+            const mappedColor =
+              colorMap && colorMap[regionName] ? colorMap[regionName] : null;
+            const baseColor = mappedColor || color || newPath.fill;
+            const fillColor = isClicked
+              ? activeColor || baseColor
+              : isHovered
+                ? hoverColor || baseColor
+                : baseColor;
 
-              return (
-                <path
-                  key={newPath.id}
-                  id={newPath.id}
-                  d={newPath.d}
-                  fill={fillColor}
-                  stroke="black"
-                  onClick={() => handleClick(newPath.id)}
-                  onMouseEnter={() => handleMouseEnter(newPath.id)}
-                  onMouseLeave={handleMouseLeave}
-                  style={{ cursor: "pointer", transition: "fill 0.2s ease" }}
-                />
-              );
-            })}
-            </g>
-          </g>
+            return (
+              <path
+                key={newPath.id}
+                id={newPath.id}
+                d={newPath.d}
+                fill={fillColor}
+                fillRule={fillRule}
+                stroke={stroke}
+                strokeWidth={strokeWidth}
+                onClick={() => handleClick(newPath.id)}
+                onMouseEnter={() => handleMouseEnter(newPath.id)}
+                onMouseLeave={handleMouseLeave}
+                style={{ cursor: "pointer", transition: "fill 0.2s ease" }}
+              />
+            );
+          })}
         </g>
       </svg>
 
-      {showAttributions && (
+      {showAttributions && attribution && (
         <div
           style={{
             position: "absolute",
@@ -106,14 +111,14 @@ export function BaseMap({
           }}
         >
           © <a
-            href="https://creativecommons.org/licenses/by-sa/4.0"
+            href={attribution.licenseHref}
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#555", pointerEvents: "auto" }}
           >
-            CC BY-SA 4.0
+            {attribution.license}
           </a>{" "}
-          Sagarjkhatri via Wikimedia Commons
+          {attribution.holder}
         </div>
       )}
     </div>

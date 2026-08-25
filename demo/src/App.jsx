@@ -1,4 +1,4 @@
-import MapNepal from "./components/MapNepal";
+import MapPlayground from "./components/MapPlayground";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       </div>
       
       <div className="w-full max-w-6xl">
-        <MapNepal />
+        <MapPlayground />
       </div>
     </div>
   );

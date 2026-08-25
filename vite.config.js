@@ -6,6 +6,7 @@ export default defineConfig({
     lib: {
       entry: {
         np: resolve(import.meta.dirname, "src/countries/np/index.js"),
+        in: resolve(import.meta.dirname, "src/countries/in/index.js"),
       },
       name: "ReactWorldMaps",
       formats: ["es", "cjs"],

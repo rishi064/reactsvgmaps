@@ -1,0 +1,49 @@
+MAP DATA LICENCES
+=================
+
+The source code in this package is MIT licensed (see LICENSE). The map boundary
+data is not — each country's data carries the licence of the source it was
+derived from, listed below.
+
+This split is normal for map libraries: using the package is unrestricted, but
+redistributing or modifying the boundary data itself carries the obligations of
+whichever source it came from.
+
+
+Nepal — src/countries/np/data/
+------------------------------
+Districts and provinces.
+
+  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
+            https://creativecommons.org/licenses/by-sa/4.0/
+  Source:   Sagarjkhatri, via Wikimedia Commons
+
+CC BY-SA 4.0 is a share-alike licence: modified versions of this boundary data
+must be distributed under the same terms, with attribution retained.
+
+
+India — src/countries/in/data/
+------------------------------
+States and union territories.
+
+  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
+            https://creativecommons.org/licenses/by-sa/4.0/
+  Source:   Census of India 2011
+
+Share-alike, as with Nepal: modified versions of this boundary data must be
+distributed under the same terms, with attribution retained.
+
+Note for future data: Indian government open data is normally published under the
+Government Open Data Licence - India (GODL-India), not a Creative Commons licence.
+Datasets sourced from data.gov.in, Survey of India or Census of India portals
+should be checked for GODL terms rather than assumed to be CC.
+
+
+Attribution overlay
+-------------------
+Map components render an attribution overlay by default, which is what satisfies
+the attribution requirement of the licences above at runtime.
+
+Setting `showAttributions={false}` removes it. That is permitted, but it moves
+the attribution obligation onto whoever does it — they must credit the source
+elsewhere in their interface or documentation.

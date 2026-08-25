@@ -2,6 +2,8 @@ import React from "react";
 import { BaseMap } from "../../BaseMap";
 import { mapNepalProvincePaths } from "./data/NepalMapProvince.js";
 import { provinces } from "./data/provinces.js";
+import { nepalAttribution } from "./data/attribution.js";
+import { NEPAL_TRANSFORM, NEPAL_VIEWBOX } from "./geometry.js";
 
 export function NepalProvinceMap(props) {
   return (
@@ -9,8 +11,9 @@ export function NepalProvinceMap(props) {
       {...props}
       paths={mapNepalProvincePaths}
       regionNames={provinces}
-      viewBox="0 0 296.06867 141.31122"
-      mapTransform="translate(-24.118069,-153.12788)"
+      viewBox={NEPAL_VIEWBOX}
+      mapTransform={NEPAL_TRANSFORM}
+      attribution={nepalAttribution}
     />
   );
 }
