@@ -47,16 +47,15 @@ function ColorInput({ id, label, value, onChange }) {
 
 function Readout({ label, value, color }) {
   return (
-    // Fixed height + truncate: the name changes on every hover, and letting it
-    // wrap or resize reflows the whole page under the cursor.
-    <div className="flex flex-col items-center gap-2 flex-1 min-w-0 basis-0">
+    // Names wrap rather than clip, inside a fixed-height box: the name changes on
+    // every hover, so a box that resizes would reflow the page under the cursor.
+    <div className="flex flex-col items-center gap-2 flex-1 min-w-36 basis-0">
       <span className={labelClass}>{label}</span>
-      <div className="flex items-center justify-center h-11 w-full min-w-0">
+      <div className="flex items-center justify-center h-16 w-full min-w-0">
         <p
-          className={`text-lg sm:text-xl font-bold m-0 w-full text-center truncate ${
+          className={`text-base sm:text-lg font-bold m-0 w-full text-center leading-tight wrap-break-word ${
             value ? color : "text-gray-300 select-none"
           }`}
-          title={value || undefined}
         >
           {value || "None"}
         </p>
