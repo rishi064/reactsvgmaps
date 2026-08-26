@@ -1,6 +1,6 @@
 # react-svg-maps
 
-A React component library for interactive SVG maps. Currently features Nepal's district and province maps, India's state map, and the state and district maps of Germany and Austria.
+A React component library for interactive SVG maps. Currently features Nepal's district and province maps, India's state map, the state and district maps of Germany and Austria, and Switzerland's cantons.
 
 **Live Demo:** [https://reactsvgmaps.com](https://reactsvgmaps.com)
 **GitHub:** [https://github.com/rishi064/reactsvgmaps](https://github.com/rishi064/reactsvgmaps)
@@ -79,6 +79,17 @@ suffix: `"Krems (Land)"`, `"St. Pölten (Land)"` and `"Wiener Neustadt (Land)"`.
 The cities themselves are `"Krems an der Donau"`, `"St. Pölten"` and
 `"Wiener Neustadt"`.
 
+### `react-svg-maps/ch`
+
+| Export                     | Description                                            |
+| :------------------------- | :------------------------------------------------------ |
+| `<SwitzerlandCantonMap />` | Interactive map of Switzerland's 26 cantons.           |
+| `switzerlandCantons`       | `string[]` of the 26 canton names, in path-id order.   |
+
+Cantons are named in their own official language — `"Ticino"`, `"Genève"`,
+`"Graubünden"`, not the English or German exonyms. Switzerland stops at canton
+level: its districts vary too much between cantons to make one map meaningful.
+
 The exported name arrays let you build a `colorMap`, legend or dropdown without retyping every region:
 
 ```jsx
@@ -126,5 +137,6 @@ Map boundary data is licensed separately, per country — see [LICENSE-DATA](LIC
 | India states & UTs | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Census of India 2011 |
 | Germany Bundesländer & Kreise | [DL-DE/BY-2.0](https://www.govdata.de/dl-de/by-2-0) | GeoBasis-DE / BKG, via [geoBoundaries](https://www.geoboundaries.org/) |
 | Austria Bundesländer & Bezirke | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Colazivi / BEV, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg) |
+| Switzerland cantons | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Poulpy / Pymouss44, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Switzerland_Cantons_Map_with_Names_and_Capitals_(french).svg) |
 
 Map components render an attribution overlay by default, which satisfies the attribution requirement at runtime. Passing `showAttributions={false}` is allowed, but then crediting the source elsewhere becomes your responsibility.

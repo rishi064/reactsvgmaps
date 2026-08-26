@@ -17,6 +17,7 @@ import {
   austriaStates,
   austriaDistricts,
 } from "react-svg-maps/at";
+import { SwitzerlandCantonMap, switzerlandCantons } from "react-svg-maps/ch";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -79,6 +80,17 @@ export const COUNTRIES = {
         Component: AustriaDistrictMap,
         names: austriaDistricts,
         colorMap: { Liezen: "blue", Bregenz: "green", Graz: "red" },
+      },
+    },
+  },
+  ch: {
+    label: "Switzerland",
+    maps: {
+      canton: {
+        label: "Kantone (Cantons)",
+        Component: SwitzerlandCantonMap,
+        names: switzerlandCantons,
+        colorMap: { Graubünden: "blue", Ticino: "green", "Basel-Stadt": "red" },
       },
     },
   },

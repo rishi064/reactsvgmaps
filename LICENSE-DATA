@@ -1,5 +1,4 @@
-MAP DATA LICENCES
-=================
+# MAP DATA LICENCES
 
 The source code in this package is MIT licensed (see LICENSE). The map boundary
 data is not — each country's data carries the licence of the source it was
@@ -9,26 +8,24 @@ This split is normal for map libraries: using the package is unrestricted, but
 redistributing or modifying the boundary data itself carries the obligations of
 whichever source it came from.
 
+## Nepal — src/countries/np/data/
 
-Nepal — src/countries/np/data/
-------------------------------
 Districts and provinces.
 
-  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
-            https://creativecommons.org/licenses/by-sa/4.0/
-  Source:   Sagarjkhatri, via Wikimedia Commons
+Licence: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Source: Sagarjkhatri, via Wikimedia Commons
 
 CC BY-SA 4.0 is a share-alike licence: modified versions of this boundary data
 must be distributed under the same terms, with attribution retained.
 
+## India — src/countries/in/data/
 
-India — src/countries/in/data/
-------------------------------
 States and union territories.
 
-  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
-            https://creativecommons.org/licenses/by-sa/4.0/
-  Source:   Census of India 2011
+Licence: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Source: Census of India 2011
 
 Share-alike, as with Nepal: modified versions of this boundary data must be
 distributed under the same terms, with attribution retained.
@@ -38,15 +35,14 @@ Government Open Data Licence - India (GODL-India), not a Creative Commons licenc
 Datasets sourced from data.gov.in, Survey of India or Census of India portals
 should be checked for GODL terms rather than assumed to be CC.
 
+## Germany — src/countries/de/data/
 
-Germany — src/countries/de/data/
---------------------------------
 Bundeslaender (states) and Kreise (districts).
 
-  Licence:  Data licence Germany - Attribution - Version 2.0 (DL-DE/BY-2.0)
-            https://www.govdata.de/dl-de/by-2-0
-  Source:   GeoBasis-DE / Bundesamt fuer Kartographie und Geodaesie (BKG),
-            obtained via the geoBoundaries project (https://www.geoboundaries.org/)
+Licence: Data licence Germany - Attribution - Version 2.0 (DL-DE/BY-2.0)
+https://www.govdata.de/dl-de/by-2-0
+Source: GeoBasis-DE / Bundesamt fuer Kartographie und Geodaesie (BKG),
+obtained via the geoBoundaries project (https://www.geoboundaries.org/)
 
 DL-DE/BY-2.0 requires attribution only - there is no share-alike obligation, so
 derived works may be redistributed under any terms provided the source is named.
@@ -54,26 +50,42 @@ derived works may be redistributed under any terms provided the source is named.
 The geoBoundaries project additionally asks to be acknowledged where its data is
 used, which is why it appears in the attribution overlay alongside BKG.
 
+## Austria — src/countries/at/data/
 
-Austria — src/countries/at/data/
---------------------------------
 Bundeslaender (states) and Bezirke (districts).
 
-  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
-            https://creativecommons.org/licenses/by-sa/4.0/
-  Source:   Colazivi, "AT - blank - all layers.svg", via Wikimedia Commons
-            https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg
-            Itself derived from a shapefile by the Bundesamt fuer Eich- und
-            Vermessungswesen (BEV), published under CC BY 4.0.
+Licence: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Source: Colazivi, "AT - blank - all layers.svg", via Wikimedia Commons
+https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg
+Itself derived from a shapefile by the Bundesamt fuer Eich- und
+Vermessungswesen (BEV), published under CC BY 4.0.
 
 Share-alike, as with Nepal and India: modified versions of this boundary data
 must be distributed under the same terms, with attribution retained. Crediting
 the author satisfies CC BY-SA; BEV is named as well because the upstream CC BY 4.0
 licence carries its own attribution requirement.
 
+## Switzerland — src/countries/ch/data/
 
-Attribution overlay
--------------------
+Kantone (cantons).
+
+Licence: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Source: Poulpy, "Switzerland Cantons Map with Names and Capitals (french)"
+https://commons.wikimedia.org/wiki/File:Switzerland_Cantons_Map_with_Names_and_Capitals_(french).svg
+Itself derived from "Suisse cantons.svg" by Pymouss44.
+
+The two files upstream carry different tags on Commons — CC BY 3.0 on Poulpy's,
+CC BY-SA 4.0 on the Pymouss44 original it derives from. Share-alike is the
+stricter of the two, so the data ships as CC BY-SA 4.0 and both authors are
+credited, the same principle applied to any mixed-source data here.
+
+Only the canton boundaries were taken. The source also carries a lakes layer and
+an international-border outline.
+
+## Attribution overlay
+
 Map components render an attribution overlay by default, which is what satisfies
 the attribution requirement of the licences above at runtime.
 

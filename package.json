@@ -26,6 +26,10 @@
     "./at": {
       "import": "./dist/at.js",
       "require": "./dist/at.cjs"
+    },
+    "./ch": {
+      "import": "./dist/ch.js",
+      "require": "./dist/ch.cjs"
     }
   },
   "files": [
