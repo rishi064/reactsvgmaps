@@ -11,6 +11,12 @@ import {
   germanyStates,
   germanyDistricts,
 } from "react-svg-maps/de";
+import {
+  AustriaStateMap,
+  AustriaDistrictMap,
+  austriaStates,
+  austriaDistricts,
+} from "react-svg-maps/at";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -56,6 +62,23 @@ export const COUNTRIES = {
         Component: GermanyDistrictMap,
         names: germanyDistricts,
         colorMap: { Konstanz: "blue", Hamburg: "green", Ahrweiler: "red" },
+      },
+    },
+  },
+  at: {
+    label: "Austria",
+    maps: {
+      state: {
+        label: "Bundesländer (States)",
+        Component: AustriaStateMap,
+        names: austriaStates,
+        colorMap: { Tirol: "blue", Steiermark: "green", Wien: "red" },
+      },
+      district: {
+        label: "Bezirke (Districts)",
+        Component: AustriaDistrictMap,
+        names: austriaDistricts,
+        colorMap: { Liezen: "blue", Bregenz: "green", Graz: "red" },
       },
     },
   },

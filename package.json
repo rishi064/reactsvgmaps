@@ -1,7 +1,7 @@
 {
   "name": "react-svg-maps",
   "version": "1.2.0",
-  "description": "Interactive SVG maps for React (Nepal districts and provinces, India states)",
+  "description": "Interactive SVG maps for all the countries in the world as react-components(every countries added incrementally)",
   "author": "Rishi Prasad Aryal",
   "license": "MIT",
   "repository": {
@@ -22,6 +22,10 @@
     "./de": {
       "import": "./dist/de.js",
       "require": "./dist/de.cjs"
+    },
+    "./at": {
+      "import": "./dist/at.js",
+      "require": "./dist/at.cjs"
     }
   },
   "files": [

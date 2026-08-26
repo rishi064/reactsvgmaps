@@ -1,6 +1,6 @@
 # react-svg-maps
 
-A React component library for interactive SVG maps. Currently features Nepal's district and province maps, and India's state map.
+A React component library for interactive SVG maps. Currently features Nepal's district and province maps, India's state map, and the state and district maps of Germany and Austria.
 
 **Live Demo:** [https://reactsvgmaps.com](https://reactsvgmaps.com)
 **GitHub:** [https://github.com/rishi064/reactsvgmaps](https://github.com/rishi064/reactsvgmaps)
@@ -65,6 +65,20 @@ Each country is a separate import path, so your bundler only pulls in the map da
 | `germanyStates`           | `string[]` of the 16 Bundesland names, in path-id order. |
 | `germanyDistricts`        | `string[]` of the 401 Kreis names, in path-id order.     |
 
+### `react-svg-maps/at`
+
+| Export                    | Description                                              |
+| :------------------------ | :------------------------------------------------------- |
+| `<AustriaStateMap />`     | Interactive map of Austria's 9 Bundesländer.             |
+| `<AustriaDistrictMap />`  | Interactive map of Austria's 94 Bezirke.                 |
+| `austriaStates`           | `string[]` of the 9 Bundesland names, in path-id order.  |
+| `austriaDistricts`        | `string[]` of the 94 Bezirk names, in path-id order.     |
+
+Three Bezirke share a name with the Statutarstadt they surround, so they carry a
+suffix: `"Krems (Land)"`, `"St. Pölten (Land)"` and `"Wiener Neustadt (Land)"`.
+The cities themselves are `"Krems an der Donau"`, `"St. Pölten"` and
+`"Wiener Neustadt"`.
+
 The exported name arrays let you build a `colorMap`, legend or dropdown without retyping every region:
 
 ```jsx
@@ -111,5 +125,6 @@ Map boundary data is licensed separately, per country — see [LICENSE-DATA](LIC
 | Nepal districts & provinces | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Sagarjkhatri, via Wikimedia Commons |
 | India states & UTs | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Census of India 2011 |
 | Germany Bundesländer & Kreise | [DL-DE/BY-2.0](https://www.govdata.de/dl-de/by-2-0) | GeoBasis-DE / BKG, via [geoBoundaries](https://www.geoboundaries.org/) |
+| Austria Bundesländer & Bezirke | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Colazivi / BEV, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg) |
 
 Map components render an attribution overlay by default, which satisfies the attribution requirement at runtime. Passing `showAttributions={false}` is allowed, but then crediting the source elsewhere becomes your responsibility.

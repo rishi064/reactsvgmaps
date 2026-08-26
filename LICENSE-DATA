@@ -55,6 +55,23 @@ The geoBoundaries project additionally asks to be acknowledged where its data is
 used, which is why it appears in the attribution overlay alongside BKG.
 
 
+Austria — src/countries/at/data/
+--------------------------------
+Bundeslaender (states) and Bezirke (districts).
+
+  Licence:  Creative Commons Attribution-ShareAlike 4.0 International
+            https://creativecommons.org/licenses/by-sa/4.0/
+  Source:   Colazivi, "AT - blank - all layers.svg", via Wikimedia Commons
+            https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg
+            Itself derived from a shapefile by the Bundesamt fuer Eich- und
+            Vermessungswesen (BEV), published under CC BY 4.0.
+
+Share-alike, as with Nepal and India: modified versions of this boundary data
+must be distributed under the same terms, with attribution retained. Crediting
+the author satisfies CC BY-SA; BEV is named as well because the upstream CC BY 4.0
+licence carries its own attribution requirement.
+
+
 Attribution overlay
 -------------------
 Map components render an attribution overlay by default, which is what satisfies
