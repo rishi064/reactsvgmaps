@@ -18,6 +18,10 @@
     "./in": {
       "import": "./dist/in.js",
       "require": "./dist/in.cjs"
+    },
+    "./de": {
+      "import": "./dist/de.js",
+      "require": "./dist/de.cjs"
     }
   },
   "files": [

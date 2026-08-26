@@ -5,6 +5,12 @@ import {
   nepalDistricts,
 } from "react-svg-maps/np";
 import { IndiaStateMap, indiaStates } from "react-svg-maps/in";
+import {
+  GermanyStateMap,
+  GermanyDistrictMap,
+  germanyStates,
+  germanyDistricts,
+} from "react-svg-maps/de";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -33,6 +39,23 @@ export const COUNTRIES = {
         Component: IndiaStateMap,
         names: indiaStates,
         colorMap: { Kerala: "blue", Rajasthan: "green", Sikkim: "red" },
+      },
+    },
+  },
+  de: {
+    label: "Germany",
+    maps: {
+      state: {
+        label: "Bundesländer (States)",
+        Component: GermanyStateMap,
+        names: germanyStates,
+        colorMap: { Bayern: "blue", Hessen: "green", Saarland: "red" },
+      },
+      district: {
+        label: "Kreise (Districts)",
+        Component: GermanyDistrictMap,
+        names: germanyDistricts,
+        colorMap: { Konstanz: "blue", Hamburg: "green", Ahrweiler: "red" },
       },
     },
   },

@@ -39,6 +39,22 @@ Datasets sourced from data.gov.in, Survey of India or Census of India portals
 should be checked for GODL terms rather than assumed to be CC.
 
 
+Germany — src/countries/de/data/
+--------------------------------
+Bundeslaender (states) and Kreise (districts).
+
+  Licence:  Data licence Germany - Attribution - Version 2.0 (DL-DE/BY-2.0)
+            https://www.govdata.de/dl-de/by-2-0
+  Source:   GeoBasis-DE / Bundesamt fuer Kartographie und Geodaesie (BKG),
+            obtained via the geoBoundaries project (https://www.geoboundaries.org/)
+
+DL-DE/BY-2.0 requires attribution only - there is no share-alike obligation, so
+derived works may be redistributed under any terms provided the source is named.
+
+The geoBoundaries project additionally asks to be acknowledged where its data is
+used, which is why it appears in the attribution overlay alongside BKG.
+
+
 Attribution overlay
 -------------------
 Map components render an attribution overlay by default, which is what satisfies

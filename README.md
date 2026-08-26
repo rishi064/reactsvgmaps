@@ -56,6 +56,15 @@ Each country is a separate import path, so your bundler only pulls in the map da
 | `<IndiaStateMap />` | Interactive map of India's 36 states and union territories. |
 | `indiaStates`       | `string[]` of the 36 state/UT names, in path-id order.      |
 
+### `react-svg-maps/de`
+
+| Export                    | Description                                              |
+| :------------------------ | :------------------------------------------------------- |
+| `<GermanyStateMap />`     | Interactive map of Germany's 16 Bundesländer.            |
+| `<GermanyDistrictMap />`  | Interactive map of Germany's 401 Kreise.                 |
+| `germanyStates`           | `string[]` of the 16 Bundesland names, in path-id order. |
+| `germanyDistricts`        | `string[]` of the 401 Kreis names, in path-id order.     |
+
 The exported name arrays let you build a `colorMap`, legend or dropdown without retyping every region:
 
 ```jsx
@@ -101,5 +110,6 @@ Map boundary data is licensed separately, per country — see [LICENSE-DATA](LIC
 | :--- | :--- | :--- |
 | Nepal districts & provinces | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Sagarjkhatri, via Wikimedia Commons |
 | India states & UTs | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Census of India 2011 |
+| Germany Bundesländer & Kreise | [DL-DE/BY-2.0](https://www.govdata.de/dl-de/by-2-0) | GeoBasis-DE / BKG, via [geoBoundaries](https://www.geoboundaries.org/) |
 
 Map components render an attribution overlay by default, which satisfies the attribution requirement at runtime. Passing `showAttributions={false}` is allowed, but then crediting the source elsewhere becomes your responsibility.
