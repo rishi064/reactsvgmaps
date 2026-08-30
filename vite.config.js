@@ -10,6 +10,7 @@ export default defineConfig({
         de: resolve(import.meta.dirname, "src/countries/de/index.js"),
         at: resolve(import.meta.dirname, "src/countries/at/index.js"),
         ch: resolve(import.meta.dirname, "src/countries/ch/index.js"),
+        fr: resolve(import.meta.dirname, "src/countries/fr/index.js"),
       },
       name: "ReactWorldMaps",
       formats: ["es", "cjs"],

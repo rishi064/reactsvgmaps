@@ -30,6 +30,10 @@
     "./ch": {
       "import": "./dist/ch.js",
       "require": "./dist/ch.cjs"
+    },
+    "./fr": {
+      "import": "./dist/fr.js",
+      "require": "./dist/fr.cjs"
     }
   },
   "files": [

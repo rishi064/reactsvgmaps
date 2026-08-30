@@ -18,6 +18,12 @@ import {
   austriaDistricts,
 } from "react-svg-maps/at";
 import { SwitzerlandCantonMap, switzerlandCantons } from "react-svg-maps/ch";
+import {
+  FranceRegionMap,
+  FranceDepartmentMap,
+  franceRegions,
+  franceDepartments,
+} from "react-svg-maps/fr";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -91,6 +97,27 @@ export const COUNTRIES = {
         Component: SwitzerlandCantonMap,
         names: switzerlandCantons,
         colorMap: { Graubünden: "blue", Ticino: "green", "Basel-Stadt": "red" },
+      },
+    },
+  },
+  fr: {
+    label: "France",
+    maps: {
+      region: {
+        label: "Régions",
+        Component: FranceRegionMap,
+        names: franceRegions,
+        colorMap: {
+          Bretagne: "blue",
+          Occitanie: "green",
+          "Île-de-France": "red",
+        },
+      },
+      department: {
+        label: "Départements",
+        Component: FranceDepartmentMap,
+        names: franceDepartments,
+        colorMap: { Paris: "red", Gironde: "blue", "La Réunion": "green" },
       },
     },
   },

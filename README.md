@@ -1,6 +1,6 @@
 # react-svg-maps
 
-A React component library for interactive SVG maps. Currently features Nepal's district and province maps, India's state map, the state and district maps of Germany and Austria, and Switzerland's cantons.
+A React component library for interactive SVG maps. Currently features Nepal's district and province maps, India's state map, the state and district maps of Germany and Austria, Switzerland's cantons and France's régions and départements.
 
 **Live Demo:** [https://reactsvgmaps.com](https://reactsvgmaps.com)
 **GitHub:** [https://github.com/rishi064/reactsvgmaps](https://github.com/rishi064/reactsvgmaps)
@@ -90,6 +90,37 @@ Cantons are named in their own official language — `"Ticino"`, `"Genève"`,
 `"Graubünden"`, not the English or German exonyms. Switzerland stops at canton
 level: its districts vary too much between cantons to make one map meaningful.
 
+### `react-svg-maps/fr`
+
+| Export                     | Description                                                 |
+| :------------------------- | :----------------------------------------------------------- |
+| `<FranceRegionMap />`      | Interactive map of France's 18 régions.                     |
+| `<FranceDepartmentMap />`  | Interactive map of France's 101 départements.               |
+| `franceRegions`            | `string[]` of the 18 région names, in path-id order.        |
+| `franceDepartments`        | `string[]` of the 101 département names, in path-id order.  |
+
+Régions are the post-2016 ones: `"Grand Est"`, `"Occitanie"`,
+`"Nouvelle-Aquitaine"` and the rest, thirteen in metropolitan France and five
+overseas. The five overseas ones — `"Guadeloupe"`, `"Martinique"`, `"Guyane"`,
+`"La Réunion"` and `"Mayotte"` — are each a département as well, and carry the
+same name in both maps.
+
+Both maps are drawn on the same canvas, overseas included: those five are insets
+down the sides at their own scale, which is how French official maps show them.
+The two maps line up region for département, so a hover on one can highlight the
+other.
+
+Paris and the three inner-ring départements around it — `"Hauts-de-Seine"`,
+`"Seine-Saint-Denis"`, `"Val-de-Marne"` — are a dozen units across on a
+1000-unit map, so they are small targets at default `strokeWidth`. The source's
+magnified inset of them is not part of the data.
+
+Names are the official French ones, accents included: `"Côte-d'Or"`, `"Hautes-Pyrénées"`,
+`"Territoire de Belfort"`. Corsica is its two départements, `"Corse-du-Sud"` and
+`"Haute-Corse"`. `"Rhône"` covers the Métropole de Lyon as well — the source
+predates the 2015 split, and INSEE's separate `69M` and `69D` codes have no
+outline of their own here.
+
 The exported name arrays let you build a `colorMap`, legend or dropdown without retyping every region:
 
 ```jsx
@@ -138,5 +169,6 @@ Map boundary data is licensed separately, per country — see [LICENSE-DATA](LIC
 | Germany Bundesländer & Kreise | [DL-DE/BY-2.0](https://www.govdata.de/dl-de/by-2-0) | GeoBasis-DE / BKG, via [geoBoundaries](https://www.geoboundaries.org/) |
 | Austria Bundesländer & Bezirke | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Colazivi / BEV, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_-_blank_-_all_layers.svg) |
 | Switzerland cantons | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Poulpy / Pymouss44, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Switzerland_Cantons_Map_with_Names_and_Capitals_(french).svg) |
+| France régions & départements | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Nilstilar, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:France_r%C3%A9gionale.svg) |
 
 Map components render an attribution overlay by default, which satisfies the attribution requirement at runtime. Passing `showAttributions={false}` is allowed, but then crediting the source elsewhere becomes your responsibility.
