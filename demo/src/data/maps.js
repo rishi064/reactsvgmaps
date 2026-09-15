@@ -24,6 +24,42 @@ import {
   franceRegions,
   franceDepartments,
 } from "react-svg-maps/fr";
+import {
+  DenmarkRegionMap,
+  DenmarkMunicipalityMap,
+  denmarkRegions,
+  denmarkMunicipalities,
+} from "react-svg-maps/dk";
+import {
+  PolandVoivodeshipMap,
+  PolandCountyMap,
+  polandVoivodeships,
+  polandCounties,
+} from "react-svg-maps/pl";
+import {
+  ScotlandCouncilAreaMap,
+  scotlandCouncilAreas,
+} from "react-svg-maps/sct";
+import {
+  FinlandRegionMap,
+  FinlandMunicipalityMap,
+  finlandRegions,
+  finlandMunicipalities,
+} from "react-svg-maps/fi";
+import {
+  JapanRegionMap,
+  JapanPrefectureMap,
+  japanRegions,
+  japanPrefectures,
+} from "react-svg-maps/jp";
+import { RussiaSubjectMap, russiaSubjects } from "react-svg-maps/ru";
+import {
+  BrazilStateMap,
+  BrazilMunicipalityMap,
+  brazilStates,
+  brazilMunicipalities,
+} from "react-svg-maps/br";
+import { USStateMap, USCountyMap, usStates, usCounties } from "react-svg-maps/us";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -118,6 +154,146 @@ export const COUNTRIES = {
         Component: FranceDepartmentMap,
         names: franceDepartments,
         colorMap: { Paris: "red", Gironde: "blue", "La Réunion": "green" },
+      },
+    },
+  },
+  dk: {
+    label: "Denmark",
+    maps: {
+      region: {
+        label: "Regioner (Regions)",
+        Component: DenmarkRegionMap,
+        names: denmarkRegions,
+        colorMap: { Hovedstaden: "red", Midtjylland: "blue", Sjælland: "green" },
+      },
+      municipality: {
+        label: "Kommuner (Municipalities)",
+        Component: DenmarkMunicipalityMap,
+        names: denmarkMunicipalities,
+        colorMap: { København: "red", Aarhus: "blue", Bornholm: "green" },
+      },
+    },
+  },
+  pl: {
+    label: "Poland",
+    maps: {
+      voivodeship: {
+        label: "Województwa (Voivodeships)",
+        Component: PolandVoivodeshipMap,
+        names: polandVoivodeships,
+        colorMap: {
+          Mazowieckie: "red",
+          Małopolskie: "blue",
+          Pomorskie: "green",
+        },
+      },
+      county: {
+        label: "Powiaty (Counties)",
+        Component: PolandCountyMap,
+        names: polandCounties,
+        colorMap: {
+          Warszawa: "red",
+          Kraków: "blue",
+          "powiat tatrzański": "green",
+        },
+      },
+    },
+  },
+  fi: {
+    label: "Finland",
+    maps: {
+      region: {
+        label: "Maakunnat (Regions)",
+        Component: FinlandRegionMap,
+        names: finlandRegions,
+        colorMap: { Uusimaa: "red", Lappi: "blue", Åland: "green" },
+      },
+      municipality: {
+        label: "Kunnat (Municipalities)",
+        Component: FinlandMunicipalityMap,
+        names: finlandMunicipalities,
+        colorMap: { Helsinki: "red", Rovaniemi: "blue", Tampere: "green" },
+      },
+    },
+  },
+  jp: {
+    label: "Japan",
+    maps: {
+      region: {
+        label: "Regions",
+        Component: JapanRegionMap,
+        names: japanRegions,
+        colorMap: { Kanto: "red", Kansai: "blue", Hokkaido: "green" },
+      },
+      prefecture: {
+        label: "Prefectures",
+        Component: JapanPrefectureMap,
+        names: japanPrefectures,
+        colorMap: { Tokyo: "red", Osaka: "blue", Okinawa: "green" },
+      },
+    },
+  },
+  ru: {
+    label: "Russia",
+    maps: {
+      subject: {
+        label: "Federal Subjects",
+        Component: RussiaSubjectMap,
+        names: russiaSubjects,
+        colorMap: { Moscow: "red", Tatarstan: "blue", "Sakha Republic": "green" },
+      },
+    },
+  },
+  br: {
+    label: "Brazil",
+    maps: {
+      state: {
+        label: "Estados (Federative Units)",
+        Component: BrazilStateMap,
+        names: brazilStates,
+        colorMap: { "São Paulo": "red", Amazonas: "blue", Bahia: "green" },
+      },
+      municipality: {
+        label: "Municípios (Municipalities)",
+        Component: BrazilMunicipalityMap,
+        names: brazilMunicipalities,
+        colorMap: { "São Paulo": "red", Manaus: "blue", "Belo Horizonte": "green" },
+      },
+    },
+  },
+  us: {
+    label: "United States",
+    maps: {
+      state: {
+        label: "States",
+        Component: USStateMap,
+        names: usStates,
+        colorMap: { Texas: "red", California: "blue", Alaska: "green" },
+      },
+      county: {
+        label: "Counties",
+        Component: USCountyMap,
+        names: usCounties,
+        colorMap: {
+          "Harris, Texas": "red",
+          "Los Angeles, California": "blue",
+          "District of Columbia": "green",
+        },
+      },
+    },
+  },
+  sct: {
+    label: "Scotland",
+    maps: {
+      councilArea: {
+        label: "Council Areas",
+        Component: ScotlandCouncilAreaMap,
+        names: scotlandCouncilAreas,
+        colorMap: {
+          Highland: "green",
+          "City of Edinburgh": "red",
+          "Shetland Islands": "blue",
+        },
       },
     },
   },

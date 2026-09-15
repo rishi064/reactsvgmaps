@@ -1,0 +1,18 @@
+export const polandVoivodeshipNames = [
+  "Dolnośląskie",
+  "Kujawsko-pomorskie",
+  "Łódzkie",
+  "Lubelskie",
+  "Lubuskie",
+  "Małopolskie",
+  "Mazowieckie",
+  "Opolskie",
+  "Podkarpackie",
+  "Podlaskie",
+  "Pomorskie",
+  "Śląskie",
+  "Świętokrzyskie",
+  "Warmińsko-mazurskie",
+  "Wielkopolskie",
+  "Zachodniopomorskie",
+];

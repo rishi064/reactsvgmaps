@@ -34,6 +34,38 @@
     "./fr": {
       "import": "./dist/fr.js",
       "require": "./dist/fr.cjs"
+    },
+    "./dk": {
+      "import": "./dist/dk.js",
+      "require": "./dist/dk.cjs"
+    },
+    "./pl": {
+      "import": "./dist/pl.js",
+      "require": "./dist/pl.cjs"
+    },
+    "./sct": {
+      "import": "./dist/sct.js",
+      "require": "./dist/sct.cjs"
+    },
+    "./fi": {
+      "import": "./dist/fi.js",
+      "require": "./dist/fi.cjs"
+    },
+    "./jp": {
+      "import": "./dist/jp.js",
+      "require": "./dist/jp.cjs"
+    },
+    "./ru": {
+      "import": "./dist/ru.js",
+      "require": "./dist/ru.cjs"
+    },
+    "./br": {
+      "import": "./dist/br.js",
+      "require": "./dist/br.cjs"
+    },
+    "./us": {
+      "import": "./dist/us.js",
+      "require": "./dist/us.cjs"
     }
   },
   "files": [

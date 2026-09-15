@@ -97,6 +97,153 @@ Itself derived from "France departementale.svg".
 Share-alike, as with Nepal, India and Austria: modified versions of this boundary
 data must be distributed under the same terms, with attribution retained.
 
+## Denmark — src/countries/dk/data/
+
+Regioner (regions) and kommuner (municipalities). The two levels come from
+different sources within geoBoundaries and carry different licences, which is why
+each map credits its own.
+
+Regioner:
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Source: Web Vector Maps, obtained via the geoBoundaries project
+(https://www.geoboundaries.org/)
+
+Kommuner:
+Licence: Public domain
+Source: Wikimedia Commons, obtained via the geoBoundaries project
+(https://www.geoboundaries.org/)
+
+CC BY 4.0 requires attribution only - there is no share-alike obligation. The
+kommune data carries no obligation at all; it is credited because the geoBoundaries
+project asks to be acknowledged where its data is used, the same reason it appears
+alongside BKG for Germany.
+
+## Poland — src/countries/pl/data/
+
+Wojewodztwa (voivodeships) and powiaty (counties).
+
+Licence: Open Data Commons Open Database License 1.0 (ODbL)
+https://opendatacommons.org/licenses/odbl/1-0/
+Source: (c) OpenStreetMap contributors, obtained via the geoBoundaries project
+(https://www.geoboundaries.org/)
+
+ODbL is share-alike for data: a modified version of these boundaries must be
+distributed under ODbL as well, with OpenStreetMap credited. Using the package
+carries no such obligation - that binds whoever changes the boundary data.
+
+Both levels come from the same OpenStreetMap extract, which is why they register
+against each other, and both are credited the same way.
+
+Names were normalised on the way in: eleven powiaty arrived under English names
+("Colberg County") and are shipped under their Polish ones, and the ten powiat
+names that occur twice in Poland carry their voivodeship in brackets so that the
+two are separate regions rather than one merged pair.
+
+## Scotland — src/countries/sct/data/
+
+Council areas.
+
+Licence: Creative Commons Attribution-ShareAlike 3.0 Unported
+https://creativecommons.org/licenses/by-sa/3.0/
+Source: Nilfanion, "Scottish council areas 2011.svg", via Wikimedia Commons
+https://commons.wikimedia.org/wiki/File:Scottish_council_areas_2011.svg
+Built from Ordnance Survey OpenData (Boundary-Line).
+
+Share-alike, as with Nepal, India, Austria and France: modified versions of this
+boundary data must be distributed under the same terms.
+
+The Ordnance Survey data underneath carries its own required wording, which the
+file's own licence notice states as:
+
+Contains Ordnance Survey data (c) Crown copyright and database right
+
+Both are credited: the attribution overlay names Nilfanion and Ordnance Survey,
+Crown copyright.
+
+Only the council area boundaries were taken. The source also carries a coastline,
+lakes, and the outlines of England, Northern Ireland and Ireland as context.
+
+## Finland — src/countries/fi/data/
+
+Maakunnat (regions) and kunnat (municipalities), the current division.
+
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Source: Tilastokeskus (Statistics Finland), statistical area boundaries
+https://geo.stat.fi/geoserver/tilastointialueet/wfs
+
+Attribution only - no share-alike obligation, so derived works may be
+redistributed under any terms provided Statistics Finland is named.
+
+Both levels come from the same publisher and the same year, which is why they
+register against each other.
+
+## Japan — src/countries/jp/data/
+
+Prefectures, and the eight regions built from them.
+
+Licence: Open Data Commons Open Database License 1.0 (ODbL)
+https://opendatacommons.org/licenses/odbl/1-0/
+Source: (c) OpenStreetMap contributors, obtained via the geoBoundaries project
+(https://www.geoboundaries.org/)
+
+ODbL is share-alike for data, as with Poland: a modified version of these
+boundaries must be distributed under ODbL, with OpenStreetMap credited.
+
+The region boundaries are not a separate source. Japan's regions are not an
+administrative level and no boundary set publishes them, so they are the 47
+prefectures merged into the conventional eight groups - the same data under the
+same licence.
+
+## Russia - src/countries/ru/data/
+
+Federal subjects.
+
+Licence: Open Data Commons Open Database License 1.0 (ODbL)
+https://opendatacommons.org/licenses/odbl/1-0/
+Source: (c) OpenStreetMap contributors, obtained via the geoBoundaries project
+(https://www.geoboundaries.org/)
+
+ODbL is share-alike for data, as with Poland and Japan.
+
+83 of the 89 subjects come from the Russia boundary set. The other six - Crimea,
+Sevastopol, and the Donetsk, Luhansk, Kherson and Zaporozhye oblasts - come from
+the Ukraine boundary set, relabelled, because the map follows the mapped
+country's own official position on its borders, which is the same rule the India
+map follows for Aksai Chin. Those six are recognised as Ukrainian by Ukraine and
+by most other states. A Ukraine map added to this package would draw the same
+ground as Ukrainian; the two country maps are not composable, which is a
+consequence of the rule and not a mistake in either.
+
+## Brazil - src/countries/br/data/
+
+Federative units (states plus the Distrito Federal) and municipalities.
+
+Licence: IBGE open data - free use with attribution to IBGE
+https://servicodados.ibge.gov.br/api/docs/malhas
+Source: Instituto Brasileiro de Geografia e Estatistica (IBGE), malhas
+territoriais, served from https://servicodados.ibge.gov.br/
+
+The same municipal boundaries are redistributed by the geoBoundaries project
+under CC BY 3.0 IGO; this package takes them from IBGE directly.
+
+## United States - src/countries/us/data/
+
+States and the District of Columbia, and counties and county equivalents.
+
+Licence: Public domain
+Source: United States Census Bureau, MAF/TIGER database, obtained via the
+geoBoundaries project (https://www.geoboundaries.org/)
+
+Work of the US federal government carries no copyright, so there is no obligation
+attached to this data. The geoBoundaries project asks to be acknowledged where
+its data is used, which is why it appears in the attribution overlay alongside
+the Census Bureau.
+
+Alaska and Hawaii are moved and rescaled into inset positions, and the
+Northwestern Hawaiian Islands are dropped.
+
 ## Attribution overlay
 
 Map components render an attribution overlay by default, which is what satisfies
