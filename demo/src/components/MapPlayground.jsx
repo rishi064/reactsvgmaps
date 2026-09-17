@@ -1,29 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { COUNTRIES } from "../data/maps";
+import Dropdown from "./Dropdown";
 
 const STROKE = { min: 0, max: 3, step: 0.1, default: 1 };
-
-const selectClass =
-  "appearance-none w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-[#023f45] focus:border-transparent cursor-pointer shadow-sm transition-all";
 
 const labelClass =
   "text-sm font-semibold text-gray-500 uppercase tracking-wide";
 
 const propNameClass = "text-sm font-semibold text-gray-500 font-mono";
-
-function Chevron() {
-  return (
-    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-      <svg
-        className="fill-current h-4 w-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-      </svg>
-    </div>
-  );
-}
 
 function ColorInput({ id, label, value, onChange }) {
   return (
@@ -81,6 +65,20 @@ function MapPlayground() {
   const country = COUNTRIES[countryCode];
   const { Component, names, colorMap } = country.maps[mapKey];
 
+  const countryOptions = useMemo(
+    () =>
+      Object.entries(COUNTRIES)
+        .map(([code, c]) => ({ value: code, label: c.label }))
+        .sort((a, b) => a.label.localeCompare(b.label)),
+    []
+  );
+
+  // The map list stays in its authored order: province before district.
+  const mapOptions = Object.entries(country.maps).map(([key, m]) => ({
+    value: key,
+    label: m.label,
+  }));
+
   // onHover(null) never fires when the map unmounts, so clear these by hand.
   useEffect(() => {
     setHoveredId(null);
@@ -101,47 +99,20 @@ function MapPlayground() {
   return (
     <div className="flex flex-col w-full bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6">
       <div className="flex flex-row flex-wrap items-start justify-between w-full mb-6 gap-4 sm:gap-6">
-        <div className="flex flex-col gap-2 flex-1 min-w-36">
-          <label htmlFor="countrySelect" className={labelClass}>
-            Country
-          </label>
-          <div className="relative">
-            <select
-              id="countrySelect"
-              value={countryCode}
-              onChange={(e) => handleCountryChange(e.target.value)}
-              className={selectClass}
-            >
-              {Object.entries(COUNTRIES).map(([code, c]) => (
-                <option key={code} value={code}>
-                  {c.label}
-                </option>
-              ))}
-            </select>
-            <Chevron />
-          </div>
-        </div>
+        <Dropdown
+          label="Country"
+          value={countryCode}
+          options={countryOptions}
+          onChange={handleCountryChange}
+          emptyText="No countries match"
+        />
 
-        <div className="flex flex-col gap-2 flex-1 min-w-44">
-          <label htmlFor="mapSelect" className={labelClass}>
-            Map
-          </label>
-          <div className="relative">
-            <select
-              id="mapSelect"
-              value={mapKey}
-              onChange={(e) => setMapKey(e.target.value)}
-              className={selectClass}
-            >
-              {Object.entries(country.maps).map(([key, m]) => (
-                <option key={key} value={key}>
-                  {m.label}
-                </option>
-              ))}
-            </select>
-            <Chevron />
-          </div>
-        </div>
+        <Dropdown
+          label="Map"
+          value={mapKey}
+          options={mapOptions}
+          onChange={setMapKey}
+        />
 
         <div className="flex flex-row w-full sm:w-auto gap-4">
           <Readout

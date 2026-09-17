@@ -5,7 +5,7 @@ import { states } from "./data/states.js";
 import { indiaAttribution } from "./data/attribution.js";
 
 // Scales strokeWidth into India's ~28-unit path space so 1 means the same here
-// as on every other map. See project-info-docs/package.md.
+// as on every other map.
 const STROKE_SCALE = 0.03;
 
 export function IndiaStateMap({ strokeWidth = 1, ...props }) {

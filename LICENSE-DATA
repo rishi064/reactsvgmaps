@@ -244,6 +244,142 @@ the Census Bureau.
 Alaska and Hawaii are moved and rescaled into inset positions, and the
 Northwestern Hawaiian Islands are dropped.
 
+## Afghanistan - src/countries/af/data/
+
+Provinces and districts.
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: Afghanistan Geodesy and Cartography Head Office (AGCHO) and the National
+Statistics and Information Authority (NSIA), contributed by OCHA Afghanistan and
+published by OCHA Field Information Services on the Humanitarian Data Exchange
+(https://data.humdata.org/dataset/cod-ab-afg), part of the Global Subnational
+Administrative Boundaries dataset
+
+Attribution only - there is no share-alike obligation, so derived works may be
+redistributed under any terms provided the source is named.
+
+Both levels are the same June 2025 release (version 03), which is why they
+register against each other. It carries 401 districts: the de-facto authorities
+designate 457, but boundaries are published for 401 and those are what the
+humanitarian community uses.
+
+## Albania - src/countries/al/data/
+
+Qarqe (counties) and bashki (municipalities).
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: GADM and UNHCR, vetted by Information Technology Outreach Services
+(ITOS) and published by OCHA Field Information Services on the Humanitarian Data
+Exchange (https://data.humdata.org/dataset/cod-ab-alb)
+
+Attribution only - no share-alike obligation, so derived works may be
+redistributed under any terms provided the source is named.
+
+Both levels are the same COD-AB release.
+
+## Algeria - src/countries/dz/data/
+
+Wilayas (provinces) and communes.
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: UNHCR, from the FAO Global Administrative Unit Layers (GAUL), published
+by OCHA Field Information Services on the Humanitarian Data Exchange
+(https://data.humdata.org/dataset/cod-ab-dza)
+
+Attribution only - no share-alike obligation.
+
+The source is the 48-wilaya division. The 58 wilayas in force since December 2019
+are built from its 1,541 communes: the ten wilayas promoted in February 2021 are
+the communes the Algerian legislation assigns them, and the other 48 are what
+remains. Because both levels are the same commune geometry merged, they register
+exactly against each other.
+
+## Andorra - src/countries/ad/data/
+
+Parròquies (parishes).
+
+Licence: Open Data Commons Open Database License 1.0 (ODbL)
+https://opendatacommons.org/licenses/odbl/1-0/
+Source: (c) OpenStreetMap contributors
+
+ODbL is share-alike for data, as with Poland, Japan and Russia: a modified
+version of these boundaries must be distributed under ODbL, with OpenStreetMap
+credited. Using the package carries no such obligation.
+
+## Azerbaijan - src/countries/az/data/
+
+Rayons and the cities outside them, one level.
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: GADM and OpenStreetMap, published by OCHA Field Information Services on
+the Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-aze)
+
+Attribution only. The COD-AB publishes one administrative level for Azerbaijan,
+so there is no second map. The 74 include the Nagorno-Karabakh rayons under their
+Azerbaijani names, which is what the source draws and what the rule used
+throughout this package - a country's map shows the boundaries that country's
+government defines.
+
+## Bangladesh - src/countries/bd/data/
+
+Divisions and districts (zila).
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: Bangladesh Bureau of Statistics (BBS), published by OCHA Field
+Information Services on the Humanitarian Data Exchange
+(https://data.humdata.org/dataset/cod-ab-bgd)
+
+Attribution only. Both levels are version 03 of the same release, reviewed June
+2025, so they register against each other. The 507 upazilas the source also
+carries are not included.
+
+## Belarus - src/countries/by/data/
+
+Voblasts (regions) and raions (districts).
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: UNICEF, published by OCHA Field Information Services on the Humanitarian
+Data Exchange (https://data.humdata.org/dataset/cod-ab-blr)
+
+Attribution only. The seven top-level units are the six voblasts plus the city of
+Minsk, which is separate from the voblast surrounding it.
+
+## Bhutan - src/countries/bt/data/
+
+Dzongkhags (districts) and gewogs (village blocks).
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: OCHA Regional Office for Asia and the Pacific (ROAP), published on the
+Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-btn)
+
+Attribution only. Both levels are the same release, reviewed October 2025.
+
+## Egypt - src/countries/eg/data/
+
+Governorates, and the marakiz and aqsam below them.
+
+Licence: Creative Commons Attribution 3.0 IGO (CC BY-IGO 3.0)
+https://creativecommons.org/licenses/by/3.0/igo/
+Source: Central Agency for Public Mobilization and Statistics (CAPMAS),
+published by OCHA Field Information Services on the Humanitarian Data Exchange
+(https://data.humdata.org/dataset/cod-ab-egy)
+
+Attribution only. The second level mixes rural marakiz with urban aqsam; names
+that collide take their governorate in brackets, and a markaz and a qism sharing
+a name inside one governorate are additionally prefixed with their kind. The
+source also carries a partial third level of 5,716 units, which is not included.
+
+Egypt's two levels are simplified at half the tolerance used elsewhere in the
+package, because the Alexandria port district is 2.3 km² of sinuous harbour
+outline and does not survive the normal setting.
+
 ## Attribution overlay
 
 Map components render an attribution overlay by default, which is what satisfies

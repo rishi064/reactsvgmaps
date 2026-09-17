@@ -60,6 +60,50 @@ import {
   brazilMunicipalities,
 } from "react-svg-maps/br";
 import { USStateMap, USCountyMap, usStates, usCounties } from "react-svg-maps/us";
+import {
+  AfghanistanProvinceMap,
+  AfghanistanDistrictMap,
+  afghanistanProvinces,
+  afghanistanDistricts,
+} from "react-svg-maps/af";
+import {
+  AlbaniaCountyMap,
+  AlbaniaMunicipalityMap,
+  albaniaCounties,
+  albaniaMunicipalities,
+} from "react-svg-maps/al";
+import {
+  AlgeriaWilayaMap,
+  AlgeriaCommuneMap,
+  algeriaWilayas,
+  algeriaCommunes,
+} from "react-svg-maps/dz";
+import { AndorraParishMap, andorraParishes } from "react-svg-maps/ad";
+import {
+  BhutanDzongkhagMap,
+  BhutanGewogMap,
+  bhutanDzongkhags,
+  bhutanGewogs,
+} from "react-svg-maps/bt";
+import { AzerbaijanDistrictMap, azerbaijanDistricts } from "react-svg-maps/az";
+import {
+  BelarusRegionMap,
+  BelarusDistrictMap,
+  belarusRegions,
+  belarusDistricts,
+} from "react-svg-maps/by";
+import {
+  EgyptGovernorateMap,
+  EgyptDistrictMap,
+  egyptGovernorates,
+  egyptDistricts,
+} from "react-svg-maps/eg";
+import {
+  BangladeshDivisionMap,
+  BangladeshDistrictMap,
+  bangladeshDivisions,
+  bangladeshDistricts,
+} from "react-svg-maps/bd";
 
 // Maps available in the playground, keyed by package subpath.
 export const COUNTRIES = {
@@ -278,6 +322,163 @@ export const COUNTRIES = {
           "Harris, Texas": "red",
           "Los Angeles, California": "blue",
           "District of Columbia": "green",
+        },
+      },
+    },
+  },
+  af: {
+    label: "Afghanistan",
+    maps: {
+      province: {
+        label: "Provinces",
+        Component: AfghanistanProvinceMap,
+        names: afghanistanProvinces,
+        colorMap: { Kabul: "red", Hirat: "blue", Kandahar: "green" },
+      },
+      district: {
+        label: "Districts",
+        Component: AfghanistanDistrictMap,
+        names: afghanistanDistricts,
+        colorMap: {
+          Kabul: "red",
+          "Fayzabad (Badakhshan)": "blue",
+          Zaranj: "green",
+        },
+      },
+    },
+  },
+  al: {
+    label: "Albania",
+    maps: {
+      county: {
+        label: "Qarqe (Counties)",
+        Component: AlbaniaCountyMap,
+        names: albaniaCounties,
+        colorMap: { Tiranë: "red", Shkodër: "blue", Vlorë: "green" },
+      },
+      municipality: {
+        label: "Bashkitë (Municipalities)",
+        Component: AlbaniaMunicipalityMap,
+        names: albaniaMunicipalities,
+        colorMap: { Tiranë: "red", Sarandë: "blue", Pustec: "green" },
+      },
+    },
+  },
+  dz: {
+    label: "Algeria",
+    maps: {
+      wilaya: {
+        label: "Wilayas",
+        Component: AlgeriaWilayaMap,
+        names: algeriaWilayas,
+        colorMap: { Alger: "red", Oran: "blue", Tamanrasset: "green" },
+      },
+      commune: {
+        label: "Communes",
+        Component: AlgeriaCommuneMap,
+        names: algeriaCommunes,
+        colorMap: { Oran: "red", Constantine: "blue", Timimoun: "green" },
+      },
+    },
+  },
+  ad: {
+    label: "Andorra",
+    maps: {
+      parish: {
+        label: "Parròquies (Parishes)",
+        Component: AndorraParishMap,
+        names: andorraParishes,
+        colorMap: {
+          "Andorra la Vella": "red",
+          Canillo: "blue",
+          Ordino: "green",
+        },
+      },
+    },
+  },
+  bt: {
+    label: "Bhutan",
+    maps: {
+      dzongkhag: {
+        label: "Dzongkhags (Districts)",
+        Component: BhutanDzongkhagMap,
+        names: bhutanDzongkhags,
+        colorMap: { Thimphu: "red", Paro: "blue", Bumthang: "green" },
+      },
+      gewog: {
+        label: "Gewogs (Blocks)",
+        Component: BhutanGewogMap,
+        names: bhutanGewogs,
+        colorMap: { Chang: "red", Kawang: "blue", Lingzhi: "green" },
+      },
+    },
+  },
+  az: {
+    label: "Azerbaijan",
+    maps: {
+      district: {
+        label: "Rayonlar (Districts)",
+        Component: AzerbaijanDistrictMap,
+        names: azerbaijanDistricts,
+        colorMap: { Baku: "red", Ganja: "blue", Babek: "green" },
+      },
+    },
+  },
+  by: {
+    label: "Belarus",
+    maps: {
+      region: {
+        label: "Voblasts (Regions)",
+        Component: BelarusRegionMap,
+        names: belarusRegions,
+        colorMap: { "Minsk City": "red", Brest: "blue", Gomel: "green" },
+      },
+      district: {
+        label: "Raions (Districts)",
+        Component: BelarusDistrictMap,
+        names: belarusDistricts,
+        colorMap: { Baranovichi: "red", Bobrujsk: "blue", Braslav: "green" },
+      },
+    },
+  },
+  eg: {
+    label: "Egypt",
+    maps: {
+      governorate: {
+        label: "Governorates",
+        Component: EgyptGovernorateMap,
+        names: egyptGovernorates,
+        colorMap: { Cairo: "red", Alexandria: "blue", Aswan: "green" },
+      },
+      district: {
+        label: "Marakiz & Aqsam (Districts)",
+        Component: EgyptDistrictMap,
+        names: egyptDistricts,
+        colorMap: {
+          Abdin: "red",
+          "Nasr City": "blue",
+          "Markaz Aswan (Aswan)": "green",
+        },
+      },
+    },
+  },
+  bd: {
+    label: "Bangladesh",
+    maps: {
+      division: {
+        label: "Divisions",
+        Component: BangladeshDivisionMap,
+        names: bangladeshDivisions,
+        colorMap: { Dhaka: "red", Chattogram: "blue", Sylhet: "green" },
+      },
+      district: {
+        label: "Districts",
+        Component: BangladeshDistrictMap,
+        names: bangladeshDistricts,
+        colorMap: {
+          Dhaka: "red",
+          "Cox's Bazar": "blue",
+          Rangamati: "green",
         },
       },
     },

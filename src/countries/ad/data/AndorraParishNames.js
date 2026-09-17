@@ -1,0 +1,9 @@
+export const andorraParishNames = [
+  "Andorra la Vella",
+  "Canillo",
+  "Encamp",
+  "Escaldes-Engordany",
+  "La Massana",
+  "Ordino",
+  "Sant Julià de Lòria",
+];
